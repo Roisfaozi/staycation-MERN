@@ -2,6 +2,7 @@ import Button from 'element/Button'
 import React from 'react'
 
 export default function Categories({ data }) {
+    console.log(data)
     return data.map((category, index1) => {
         return <section className='container' key={`category-${index1}`}>
             <h4 className="mb-3 font-weight-medium">
