@@ -3,7 +3,6 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 
 export default function Categories({ data }) {
-    console.log(data)
     return data.map((category, index1) => {
         return (
             <section className='container' key={`category-${index1}`}>
