@@ -1,44 +1,171 @@
+import Button from 'element/Button'
+import Stepper from 'element/Stepper'
+import Controller from 'element/Stepper/Controller'
+import MainContent from 'element/Stepper/MainContent'
+import Meta from 'element/Stepper/Meta'
+import Numbering from 'element/Stepper/Numbering'
+import ItemDetails from 'json/itemDetails.json'
+import Completed from 'parts/checkout/Completed'
+import Payment from 'parts/checkout/Payment'
+import Header from 'parts/Header'
 import React from 'react'
-import { render } from '@testing-library/react'
-import Breadcrumb from '../element/Breadcrumb/index'
-import landingPage from 'json/landingPage.json'
-import InputNumber from 'element/Form/InputNumber'
-
+import Fade from 'react-reveal/Fade'
+import BookingInformation from '../parts/checkout/BookingInformation'
 export default class Example extends React.Component {
+  state = {
+    data: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      proofPayment: '',
+      bankName: '',
+      bankHolder: '',
+    },
+  }
 
-    state = {
-        value: '1'
+  onChange = (event) => {
+    this.setState({
+      data: {
+        ...this.state.data,
+        [event.target.name]: event.target.value,
+      },
+    })
+  }
+
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+  render() {
+    const { data } = this.state
+
+    const checkout = {
+      duration: 3,
     }
 
-    handleChange = e => {
-        this.setState({ [e.target.name]: e.target.value })
+    const steps = {
+      bookingInformation: {
+        title: 'Booking Information',
+        description: 'Please fill up the blank fields below',
+        content: (
+          <BookingInformation
+            data={data}
+            checkout={checkout}
+            ItemDetails={ItemDetails}
+            onchange={this.onChange}
+          />
+        ),
+      },
+      payment: {
+        title: 'Payment',
+        description: 'Kindly follow the instructions below',
+        content: (
+          <Payment
+            data={data}
+            ItemDetails={ItemDetails}
+            checkout={checkout}
+            onChange={this.onChange}
+          />
+        ),
+      },
+      completed: {
+        title: 'Yay! Completed',
+        description: null,
+        content: <Completed />,
+      },
     }
 
-    render() {
-        const breadcrimb = [
-            { pageTitle: 'Home', pageHref: '' },
-            { pageTitle: 'House Details', pageHref: '' }
-        ]
+    return (
+      <>
+        <Header isCentered />
 
-        return (
-            <div className="container">
-                <div className="row align-items-center justify-content-center" style={{ height: '100vh' }}>
-                    <div className="col-auto">
-                        <InputNumber
-                            max={30}
-                            suffix='night'
-                            onChange={this.handleChange}
-                            name='value'
-                            value={this.state.value}
-                        />
+        <Stepper steps={steps}>
+          {(prevStep, nextStep, CurrentStep, steps) => {
+            ;<>
+              <Numbering
+                data={steps}
+                current={CurrentStep}
+                style={{ marginBottom: 50 }}
+              />
 
-                    </div>
-                </div>
-            </div>
+              <Meta data={steps} current={CurrentStep} />
+              <MainContent data={steps} current={CurrentStep} />
 
-        )
-    }
+              {CurrentStep === 'bookingInformation' && (
+                <Controller>
+                  {data.firstName !== '' &&
+                    data.lastName !== '' &&
+                    data.email !== '' &&
+                    data.phone !== '' && (
+                      <Fade>
+                        <Button
+                          className="btn mb-3"
+                          type="button"
+                          isBlock
+                          isPrimary
+                          hasShadow
+                          onClick={nextStep}>
+                          Continue to Book
+                        </Button>
+                      </Fade>
+                    )}
+                  <Button
+                    className="btn"
+                    type="link"
+                    isBlock
+                    isLight
+                    href={`/properties${ItemDetails._id}`}>
+                    Cancel
+                  </Button>
+                </Controller>
+              )}
 
+              {CurrentStep === 'Payment' && (
+                <Controller>
+                  {data.proofPayment !== '' &&
+                    data.bankName !== '' &&
+                    data.bankHolder !== '' && (
+                      <Fade>
+                        <Button
+                          className="btn mb-3"
+                          type="button"
+                          isBlock
+                          isPrimary
+                          hasShadow
+                          onClick={nextStep}>
+                          Continue to Book
+                        </Button>
+                      </Fade>
+                    )}
+                  <Button
+                    className="btn"
+                    type="button"
+                    isBlock
+                    isLight
+                    onClick={prevStep}>
+                    Cancel
+                  </Button>
+                </Controller>
+              )}
+
+              {CurrentStep === 'completed' && (
+                <Controller>
+                  <Button
+                    className="btn"
+                    type="link"
+                    isBlock
+                    isPrimary
+                    hasShadow
+                    href="">
+                    Back to Home
+                  </Button>
+                </Controller>
+              )}
+            </>
+          }}
+        </Stepper>
+      </>
+    )
+  }
 }
-
-
