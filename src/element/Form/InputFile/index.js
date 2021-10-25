@@ -1,8 +1,9 @@
 import propTypes from 'prop-types'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './index.scss'
 
 export default function File(props) {
+  const [FileName, setFileName] = useState('')
   const {
     value,
     accept,
@@ -15,6 +16,16 @@ export default function File(props) {
   } = props
 
   const refInputfile = useRef(null)
+
+  const onChange = (event) => {
+    setFileName(event.target.value)
+    props.onChange({
+      target: {
+        name: event.target.name,
+        value: event.target.files,
+      },
+    })
+  }
 
   return (
     <div className={['input-text mbb-3', outerClassName].join(' ')}>
@@ -30,12 +41,12 @@ export default function File(props) {
           name={name}
           type="file"
           className="d-none"
-          value={value}
-          onChange={props.onChange}
+          value={FileName}
+          onChange={onChange}
         />
         <input
           onClick={() => refInputfile.current.click()}
-          defaultValue={value}
+          defaultValue={FileName}
           placeholder={placeholder}
           className={['form-control', inputClassName].join(' ')}
         />

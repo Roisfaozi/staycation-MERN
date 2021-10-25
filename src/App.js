@@ -4,6 +4,7 @@ import DetailPage from 'pages/DetailPage'
 import Example from 'pages/Example'
 import LandingPage from 'pages/LandingPage'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/checkout" component={Checkout}></Route>
         <Route path="/example" component={Example}></Route>
       </Router>
+
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

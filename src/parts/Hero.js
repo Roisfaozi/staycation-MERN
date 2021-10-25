@@ -41,13 +41,13 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src="/assets/images/icons/ic_traveler.svg"
-                  alt={`${props.data.travelers} travelers`}
+                  src={`${process.env.PUBLIC_URL}/img/ic_traveler.svg`}
+                  alt={`${props.data.travelers} Travelers`}
                 />
                 <h6 className="mt-3">
                   {NumberFormat(props.data.travelers)}{' '}
                   <span className="text-gray-500 font-weight-light">
-                    Travelers
+                    travelers
                   </span>
                 </h6>
               </div>
@@ -55,7 +55,7 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src="/assets/images/icons/ic_treasure.svg"
+                  src={`${process.env.PUBLIC_URL}/img/ic_treasure.svg`}
                   alt={`${props.data.treasures} treasures`}
                 />
                 <h6 className="mt-3">
@@ -69,7 +69,7 @@ export default function Hero(props) {
                 <img
                   width="36"
                   height="36"
-                  src="/assets/images/icons/ic_cities.svg"
+                  src={`${process.env.PUBLIC_URL}/img/ic_cities.svg`}
                   alt={`${props.data.cities} cities`}
                 />
                 <h6 className="mt-3">
