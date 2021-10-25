@@ -4,7 +4,6 @@ import Fade from 'react-reveal/Fade'
 
 export default function BookingInformation(props) {
   const { data, ItemDetails, checkout } = props
-  console.log(ItemDetails)
   return (
     <Fade>
       <div className="container" style={{ marginTop: 30 }}>
@@ -14,24 +13,24 @@ export default function BookingInformation(props) {
               <div className="card">
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
-                    src={ItemDetails.imageUrls[0].url}
-                    alt={ItemDetails.name}
+                    src={`${process.env.REACT_APP_HOST}${ItemDetails.imageId[0].imageUrl}`}
+                    alt={ItemDetails.title}
                     className="img-cover"
                   />
                 </figure>
                 <div className="row align-items-center">
                   <div className="col">
                     <div className="meta-wrapper">
-                      <h5>{ItemDetails.name}</h5>
+                      <h5>{ItemDetails.title}</h5>
                       <span className="test-gray-500">
                         {ItemDetails.city}, {ItemDetails.country}
                       </span>
                     </div>
                   </div>
                   <div className="col-auto">
-                    ${+checkout.duration * ItemDetails.proce} USD
-                    <span className="text-gray-500">per</span>
-                    {checkout.duration} {ItemDetails.unuit}
+                    ${+checkout.duration * ItemDetails.price} USD
+                    <span className="text-gray-500"> per </span>
+                    {checkout.duration} {ItemDetails.unit}
                     {+checkout.duration > 1 ? 's' : ''}
                   </div>
                 </div>

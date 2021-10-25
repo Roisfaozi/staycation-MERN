@@ -45,7 +45,6 @@ class BookingForm extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { data } = this.state
-    // console.log(prevState)
     if (prevState.data.date !== data.date) {
       const startDate = new Date(data.date.startDate)
       const endDate = new Date(data.date.endDate)
@@ -79,7 +78,6 @@ class BookingForm extends Component {
   render() {
     const { data } = this.state
     const { itemDetails, startBooking } = this.props
-    console.log(this.updateData)
     return (
       <div className="card bordered" style={{ padding: '60px 80px' }}>
         <h5 className="h2 text-teal mb-4">
