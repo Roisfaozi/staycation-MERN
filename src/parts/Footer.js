@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
         <div className="row">
           <div className="col text-center copyrights">
-            <p>Copyright 2019 • All rights reserved • Staycation</p>
+            <p>Copyright Rois Faozi 2021 • All rights reserved • Staycation</p>
           </div>
         </div>
       </div>
