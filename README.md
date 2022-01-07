@@ -53,7 +53,7 @@ npm run dev
 ## Author
 
 - Facebook : <a href="https://web.facebook.com/odjzykazama"> Rois Faozi</a>
-- LinkedIn : <a href="https://www.linkedin.com/in/adhiariyadi/"> Rois Faozi</a>
+- LinkedIn : <a href="https://www.linkedin.com/in/roisfaozi/"> Rois Faozi</a>
 
 ## Contributing
 
