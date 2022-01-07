@@ -4,9 +4,7 @@
 
 Web Staycation yang dibuat oleh <a href="https://github.com/Roisfaozi"> Rois Faozi </a>. **Porject Staycation adalah Website yang menyediakan layanan pemesanan hotel dan wisata untuk berlibur tanpa memikirkan untuk mencari tempat tinggal yang dekat dengan tampat dari tempat wisata. Staycation aplikasi untuk mencari rumah, hotel, dan apartement melalui website dengan mudah.**
 
-## Untuk Server side repository klik di bawah ini
-
-<a href="https://github.com/Roisfaozi/server-staycation"> server-staycation </a>
+## Untuk Server side repository klik <a href="https://github.com/Roisfaozi/server-staycation"> server-staycation </a>
 
 
 ## Fitur apa saja yang tersedia di Staycation?
