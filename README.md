@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">Selamat datang di Staycation! 👋</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Apa itu Staycation?
 
-## Available Scripts
+Web Staycation yang dibuat oleh <a href="https://github.com/Roisfaozi"> Rois Faozi </a>. **Porject Staycation adalah Website yang menyediakan layanan pemesanan hotel dan wisata untuk berlibur tanpa memikirkan untuk mencari tempat tinggal yang dekat dengan tampat dari tempat wisata. Staycation aplikasi untuk mencari rumah, hotel, dan apartement melalui website dengan mudah.**
 
-In the project directory, you can run:
+## Untuk Server side repository klik di bawah ini
 
-### `npm start`
+<a href="https://github.com/Roisfaozi/server-staycation"> server-staycation </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Fitur apa saja yang tersedia di Staycation?
 
-### `npm test`
+- Autentikasi Admin
+- Category & CRUD
+- Bank & CRUD
+- Item & CRUD
+- Feature & CRUD
+- Activity & CRUD
+- Booking
+- Dan lain-lain
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+> Staycation merupakan project open source yang dibuat oleh Rois Faozi. Kalian dapat download/fork/clone. Cukup beri stars di project ini agar memberiku semangat. Terima kasih!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Install
 
-### `npm run eject`
+1. **Clone Repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/Roisfaozi/Staycation-MERN.git
+cd Staycation-MERN
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Jalankan Client Staycation**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- _Install <a href="https://www.mongodb.com/try/download/community">MonggoDB</a>_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- _Instalasi website_
 
-## Learn More
+```bash
+cd Staycation-MERN
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- _Jalankan website_
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run dev
+```
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Facebook : <a href="https://web.facebook.com/odjzykazama"> Rois Faozi</a>
+- LinkedIn : <a href="https://www.linkedin.com/in/adhiariyadi/"> Rois Faozi</a>
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions, issues and feature requests di persilahkan.
+Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Copyright © 2020 Rois Faozi.
+- **Staycation is open-sourced software licensed under the MIT license.**
